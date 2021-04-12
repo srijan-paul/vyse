@@ -53,5 +53,5 @@ print(x) -- 42
 ```
 
 At this point, you might be wondering why bother with global variables at all since
-they're nearly the same as locals. To answer this, We will explore global variables 
+they're nearly the same as locals. To answer this, we will explore global variables
 further in a later section.

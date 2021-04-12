@@ -1,4 +1,3 @@
-
 /* Globals */
 
 :root {
@@ -97,7 +96,7 @@
     --sidebar-bg: #fafafa;
     --sidebar-fg: hsl(0, 0%, 0%);
     --sidebar-non-existant: #aaaaaa;
-    --sidebar-active: #ff7675;
+    --sidebar-active: #0077aa;
     --sidebar-spacer: #f4f4f4;
 
     --scrollbar: #8F8F8F;
@@ -218,7 +217,7 @@
         --sidebar-bg: #292c2f;
         --sidebar-fg: #a1adb8;
         --sidebar-non-existant: #505254;
-        --sidebar-active: #ff7675;
+        --sidebar-active: #0077aa;
         --sidebar-spacer: #393939;
 
         --scrollbar: var(--sidebar-fg);

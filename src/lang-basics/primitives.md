@@ -98,5 +98,45 @@ fast as comparing numbers.
 This is because Snap performs string interning to keep
 string comparisons fast and efficient.
 
-## Lists
-Lists are similar to arrays in other programming languages.
+## List
+Lists are similar to dynamic arrays in other programming languages.
+A list is declared by putting comma separated elements inside of `[`
+and `]`.
+
+- The `#` operator is used to get the length of a list.
+- Lists are indexed from `0`.
+- The size of lists can change at runtime.
+- Indexing a list with an invalid index (-1 or a value greater than it's length) will throw an error.
+
+```snap
+let arr = [1, 2, 3]
+for el in arr {
+  print(el)
+}
+```
+
+__Common methods and functions on lists__:
+
+- `list:push(item)`: Appends `item` to the end of the list.
+- `list:pop()`: Removes the last item from the list and returns it.
+- `len(list)`:  Returns the length of the list.
+- `list:map(fn)`: Creates a new list `ls` where `ls[i]` is `fn(list[i])`
+
+For more methods and free functions to operate on lists, refer to the standard library
+documentation.
+
+## Table
+Tables are Snap's core data structure used to store key-value pairs. 
+They're similar to `Map`s in JavaScript or tables in Lua.
+
+```snap
+const point = { x: 1, y: 2 }
+print(point['x'], point.y) -- 1 2
+```
+
+Tables are rather simple data structures in terms of usage, but they can
+prove to be very powerful. We will see in the coming sections how tables
+can be used to model OOP like encapsulation.
+
+
+
