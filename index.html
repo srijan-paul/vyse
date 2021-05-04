@@ -7,49 +7,150 @@
     <title>Vyse</title>
     <meta name="description" content="The HTML5 Herald" />
     <meta name="Srijan Paul" content="SitePoint" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="book/highlight.css" type="text/css" />
     <link rel="stylesheet" href="book/css/variables.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
 
   <body>
     <div class="content">
       <div class="header">
         <div class="header-left">
-        <img src="./media/vyse_logo.svg" alt="Vyse logo" />
+          <img src="./media/vyse_logo.svg" alt="Vyse logo" />
         </div>
         <div class="header-right">
-          <div class="vyse-title">VYSE</div>
-        
+          <div class="vyse-title">The Vyse programming language</div>
+
           <div class="about">
-            A dynamically typed and interpreted scripting language.
-            Vyse is readily embedabble and intended for use in embedded
-            scripting environments such as web servers and game engines.
+            A dynamically typed and interpreted scripting language. Vyse is
+            readily embedabble and intended for use in embedded scripting
+            environments such as web servers and game engines.
+          </div>
+
+          <div class="links">
+            <a href="./book">Docs</a>
+            <a href="https://srijan-paul.github.io/blog">Posts</a>
           </div>
         </div>
-    </div>
-
-
-    <div class="btn-list">
-      <div class="btn" id="discord-btn">
-        <img src="./media/discord.svg" alt="discord" width="25px">
-        <span>join our discord</span> 
       </div>
-      <div class="btn" id="github-btn"> 
-        <img src="./media/github.png" alt="discord" width="25px">
-        <span>view on github</span> 
+
+      <div class="btn-list">
+        <div class="btn" id="discord-btn">
+          <img src="./media/discord.svg" alt="discord" width="25px" />
+          <span>join discord</span>
+        </div>
+        <div class="btn" id="github-btn">
+          <img src="./media/github.png" alt="discord" width="25px" />
+          <span>view on github</span>
+        </div>
       </div>
+
+      <hr>
+
+      <div class="main">
+        <h2>Welcome!</h2>
+        Say hello to Vyse, a fast, compact and embedabble scripting language.
+        Let's start by answering the first question on your mind, "What does it look like?"
+        For starters, here is the mergesort algorithm written in vyse:
+<pre>
+<code class="language-vyse msort">
+fn merge(left, right, sorted) {
+  let lptr = 0, rptr = 0
+ 
+  while lptr < #left and rptr < #right {
+    if left[lptr] < right[rptr] {
+      sorted:append(left[lptr])
+      lptr += 1
+    } else {
+      sorted:append(right[rptr])
+      rptr += 1
+    }
+  }
+
+  while lptr < #left {
+    sorted:append(left[lptr])
+    lptr += 1
+  }
+
+  while rptr < #right {
+    sorted:append(right[rptr])
+    rptr += 1
+  }
+}
+ 
+fn merge_sort(arr) {
+  if #arr == 1 return
+ 
+  const mid   = len // 2,
+        left  = arr:slice(0, mid),
+        right = arr:slice(mid)
+ 
+  merge_sort(left)
+  merge_sort(right)
+  merge(left, right, arr)
+}
+ 
+</code>
+</pre>
+
+<h2>What else?</h2>
+
+<p>
+  The key selling points of Vyse are:
+  <ul>
+    <li>Stuff</li>
+    <li>Stuff</li>
+    <li>Stuff</li>
+    <li>Stuff</li>
+  </ul>
+</p>
+
+      </div>
+
+      <script
+        src="./book/highlight.js"
+        type="text/javascript"
+        charset="utf-8"
+      ></script>
+      <script>
+        hljs.configure({
+          tabReplace: "  ", // 2 spaces
+          languages: [], // Languages used for auto-detection
+        });
+
+        let code_nodes = Array.from(document.querySelectorAll("code"))
+          // Don't highlight `inline code` blocks in headers.
+          .filter(function (node) {
+            return !node.parentElement.classList.contains("header");
+          });
+
+        if (window.ace) {
+          // language-rust class needs to be removed for editable
+          // blocks or highlightjs will capture events
+          Array.from(document.querySelectorAll("code.editable")).forEach(
+            function (block) {
+              block.classList.remove("language-rust");
+            }
+          );
+
+          Array.from(document.querySelectorAll("code:not(.editable)")).forEach(
+            function (block) {
+              hljs.highlightBlock(block);
+            }
+          );
+        } else {
+          code_nodes.forEach(function (block) {
+            hljs.highlightBlock(block);
+          });
+        }
+
+        // Adding the hljs class gives code blocks the color css
+        // even if highlighting doesn't apply
+        code_nodes.forEach(function (block) {
+          block.classList.add("hljs");
+        });
+      </script>
     </div>
-
-    <!-- <div class="main">
-      <pre>
-        <code class="language-vyse">
-          const a  = 1
-        </code>
-      </pre>
-    </div> -->
-
-    <script src="./book/highlight.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>

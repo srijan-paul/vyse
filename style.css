@@ -1,16 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Rubik&family=JetBrains+Mono&display=swap");
 
 :root {
   --fg-primary: #323330;
-  --innert-width: 70%;
+  --inner-width: 70%;
 }
 
 body {
   margin: 0;
   padding: 0;
   border: none;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Fira Sans', monospace;
 }
 
 .content {
@@ -24,7 +23,7 @@ body {
 .header {
   text-align: center;
   display: flex;
-  width: var(--innert-width);
+  width: var(--inner-width);
   margin: auto;
   margin-top: 10%;
 }
@@ -48,19 +47,24 @@ body {
 
 .header-right > .vyse-title {
   font-size: 2em;
-  /* font-family: 'Advent Pro'; */
+  font-family: 'Rubik';
+}
+
+.links > a {
+  display: inline-block;
+  margin: auto;
 }
 
 /* Buttons */
 
 .btn-list {
-  width: var(--innert-width);
-	display: flex;
-	margin: auto;
-	margin-top: 1%;
-	padding-left: 2%;
-	gap: 3%;
-	text-align: center;
+  width: var(--inner-width);
+  display: flex;
+  margin: auto;
+  margin-top: 1%;
+  padding-left: 2%;
+  gap: 3%;
+  text-align: center;
 }
 
 .btn {
@@ -69,16 +73,17 @@ body {
   color: white;
   width: max-content;
   background-color: var(--fg-primary);
-  font-size: 1.4em;
-	border-radius: 25px;
+  font-size: 1.2em;
+  font-family: 'Rubik', Arial;
+  border-radius: 25px;
   padding: 0.2em 0.65em;
-	display: flex;
-	align-items: center;
-	transition-duration: 300ms;
+  display: flex;
+  align-items: center;
+  transition-duration: 300ms;
 }
 
 .btn > img {
-	padding-right: 0.4em;
+  padding-right: 0.4em;
 }
 
 .btn:hover {
@@ -97,24 +102,104 @@ body {
   color: #7289da;
 }
 
+.main {
+  text-align: left;
+  width: var(--inner-width);
+  margin: auto;
+  /* margin-top: 4%; */
+  font-size: 1.2em;
+}
+
+.header-left {
+  display: flex;
+}
+
+.header-left > img {
+  width: 250px;
+}
+
+.header-right {
+  margin-top: 5%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  gap: 0.7em;
+}
+
+a,
+a:visited {
+  color: gray;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
+
+a:hover {
+  color: #086684;
+}
+
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: var(--inner-width);
+  background-color: #ccc;
+  height: 1px;
+  margin-top: 3%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: underline gray;
+  text-decoration-thickness: 0.15em;
+  font-family: 'Rubik';
+  font-weight: 500;
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover {
+  text-decoration-color: #086684;
+  cursor: pointer;
+}
+
+/* code snippets */
+
+.hljs {
+  font-size: 80%;
+  background-color: hsl(210, 0%, 99%);
+}
+
+.language-vyse {
+  font-family: "JetBrains Mono", "JetBrains Mono", Consolas;
+}
+
+.msort {
+  max-height: 50vh;
+}
+
 @media only screen and (max-width: 1060px) {
+  .content {
+    width: 100%;
+  }
 
-	.content {
-		width: 100%;
-	}
-
-	:root {
-		--inner-width: 95%;
-	}
+  :root {
+    --inner-width: 76%;
+  }
 
   .header {
     flex-direction: column;
     text-align: center;
   }
 
-	.header-left > img {
-		max-width: 250px;
-	}
+  .header-left > img {
+    max-width: 250px;
+  }
 
   .header-left {
     width: 100%;
@@ -127,30 +212,31 @@ body {
   }
 
   .header-right {
-		width: 100%;
+    width: 100%;
     text-align: center;
-		font-size: 1.2em;
+    font-size: 1.2em;
   }
 
-	.btn-list {
-		padding-top: 4%;
-		display: inline-block;
-		margin: auto;
-	}
+  .btn-list {
+    padding-top: 4%;
+    display: inline-block;
+    margin: auto;
+  }
 
-	.btn-list > .btn {
-		margin: auto;
-		margin-bottom: 2%;
-		font-size: 1.2em;
-	}
-
-
+  .btn-list > .btn {
+    margin: auto;
+    margin-bottom: 2%;
+    font-size: 1.2em;
+  }
 }
 
-
 @media only screen and (max-width: 650px) {
-	.header {
-		width: 85%;
-		font-size: 0.95em;
-	}
+  .header {
+    width: 85%;
+    font-size: 0.95em;
+  }
+
+  .main {
+    font-size: 110%;
+  }
 }
