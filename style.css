@@ -10,6 +10,7 @@ body {
   padding: 0;
   border: none;
   font-family: 'Fira Sans', monospace;
+  line-height: 1.5;
 }
 
 .content {
@@ -26,6 +27,7 @@ body {
   width: var(--inner-width);
   margin: auto;
   margin-top: 10%;
+  margin-bottom: 2%;
 }
 
 .header-left {
@@ -33,16 +35,15 @@ body {
 }
 
 .header-left > img {
-  width: 250px;
+  height: 115%;
+  width: auto;
 }
 
 .header-right {
-  margin-top: 5%;
   text-align: left;
   display: flex;
   flex-direction: column;
   font-size: 1.2em;
-  gap: 0.7em;
 }
 
 .header-right > .vyse-title {
@@ -52,7 +53,7 @@ body {
 
 .links > a {
   display: inline-block;
-  margin: auto;
+  margin-right: 10px;
 }
 
 /* Buttons */
