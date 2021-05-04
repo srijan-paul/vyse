@@ -1,0 +1,362 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Data Types - Snap Documentation</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../overview.html"><strong aria-hidden="true">1.1.</strong> Cheatsheet</a></li><li class="chapter-item expanded "><a href="../lang-basics/syntax.html"><strong aria-hidden="true">1.2.</strong> Syntax</a></li><li class="chapter-item expanded "><a href="../lang-basics/variables.html"><strong aria-hidden="true">1.3.</strong> Variables</a></li><li class="chapter-item expanded "><a href="../lang-basics/primitives.html" class="active"><strong aria-hidden="true">1.4.</strong> Data Types</a></li></ol></li><li class="chapter-item expanded "><a href="../object-model/oop.html"><strong aria-hidden="true">2.</strong> OOP</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../object-model/prototype.html"><strong aria-hidden="true">2.1.</strong> Prototypes</a></li><li class="chapter-item expanded "><a href="../object-model/methods.html"><strong aria-hidden="true">2.2.</strong> Methods</a></li><li class="chapter-item expanded "><a href="../object-model/oop-tables.html"><strong aria-hidden="true">2.3.</strong> OOP with tables</a></li><li class="chapter-item expanded "><a href="../object-model/op-overload.html"><strong aria-hidden="true">2.4.</strong> Operator Overloading</a></li><li class="chapter-item expanded "><a href="../object-model/classes.html"><strong aria-hidden="true">2.5.</strong> Classes and Inheritance</a></li></ol></li><li class="chapter-item expanded "><a href="../functional/hof.html"><strong aria-hidden="true">3.</strong> Higher Order Functions</a></li><li class="chapter-item expanded affix "><li class="part-title">Standard Library</li><li class="chapter-item expanded "><a href="../stdlib/strings.html"><strong aria-hidden="true">4.</strong> string</a></li><li class="chapter-item expanded "><a href="../stdlib/List.html"><strong aria-hidden="true">5.</strong> list</a></li><li class="chapter-item expanded "><a href="../stdlib/table.html"><strong aria-hidden="true">6.</strong> table</a></li><li class="chapter-item expanded "><a href="../stdlib/math.html"><strong aria-hidden="true">7.</strong> math</a></li><li class="chapter-item expanded "><a href="../stdlib/io.html"><strong aria-hidden="true">8.</strong> io</a></li><li class="chapter-item expanded "><a href="../stdlib/os.html"><strong aria-hidden="true">9.</strong> os</a></li><li class="chapter-item expanded affix "><li class="part-title">Showcase</li><li class="chapter-item expanded "><a href="../showcase/sample-projects.html"><strong aria-hidden="true">10.</strong> Sample Projects</a></li><li class="chapter-item expanded affix "><li class="part-title">Embedding</li><li class="chapter-item expanded "><a href="../embed/embed.html"><strong aria-hidden="true">11.</strong> Installing from source</a></li><li class="chapter-item expanded "><a href="../embed/api.html"><strong aria-hidden="true">12.</strong> C++ API</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Snap Documentation</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="data-types"><a class="header" href="#data-types">Data Types</a></h2>
+<p>In totalap vyse provides the following native data types:</p>
+<ol>
+<li>number</li>
+<li>boolean</li>
+<li>nil </li>
+<li>string </li>
+<li>list</li>
+<li>table </li>
+<li>function</li>
+</ol>
+<p>From the above, only the first 4 are considered <em>primitive</em> data types.</p>
+<h2 id="numbers"><a class="header" href="#numbers">Numbers</a></h2>
+<p>A number in vyse is a 64-bit double precision IEEE float.
+All numeric values in vyse are represented using this type.
+There are a variety of ways you can write numbers in vyse source
+code, but they all behave the same way and use the same representation
+underneath.</p>
+<pre><code class="language-vyse">123
+12.3
+0xff -- Hex (255)
+0b101 -- Binary (5)
+1e2 -- Scientific notation (100)
+</code></pre>
+<h2 id="booleans"><a class="header" href="#booleans">Booleans</a></h2>
+<p>Booleans are as simple as you would expect. A boolean can
+take up two values, 'true' or 'false'. A value is called
+'truthy' if it is considered <em>&quot;true&quot;</em> under certain contexts.
+For example, an if statement.</p>
+<pre><code class="language-vyse">let is_truthy = \x -&gt; {
+  if x print('yes')
+  else print('no')
+} 
+
+is_truthy('a')   -- yes 
+is_truthy('')    -- yes
+is_truthy(0)     -- yes
+is_truthy(1)     -- yes
+is_truthy(true)  -- yes
+is_truthy({})    -- yes
+is_truthy([])    -- yes
+is_truthy(false) -- no
+is_truthy(nil)   -- no
+</code></pre>
+<p>One can run the code snippet above to verify that only
+a <code>false</code> boolean value or a <code>nil</code> value are considered 'falsy'. 
+All other values evaluate to <code>true</code> when truthy-ness is concerned.</p>
+<h2 id="nil"><a class="header" href="#nil">Nil</a></h2>
+<p>The <code>nil</code> data type referes to a single <code>nil</code> value. It is used to signal 
+the absence of any data.</p>
+<pre><code class="language-vyse">fn substring(s, from, len) {
+  if (strlen(s) &lt; from) return nil
+  sub = ''
+  for i = 0, len {
+    sub = sub .. s[from + len]
+  }
+  return sub
+}
+</code></pre>
+<p>Notice how when no other suitable value is found, we return <code>nil</code> in the above function.</p>
+<h2 id="string"><a class="header" href="#string">String</a></h2>
+<p>Strings are a contiguous buffer of ascii characters.
+Strings are immutable.
+Once created, the contents of a string cannot be changed.</p>
+<pre><code class="language-vyse">const s = 'abxde'
+print(s[0]) -- a
+s[2] = 'c' -- Error: Cannot mutate a string literal.
+</code></pre>
+<p>To get a modified string, you have to create a new string.</p>
+<pre><code class="language-vyse">const new_s = s:slice(0, 2) .. 'c' .. s:slice(3, 2)
+print(new_s) -- abcde
+</code></pre>
+<p>The <code>slice(start, length)</code> method is used to 'slice' a string by extracting
+a substring from it. The original string <code>s</code> is left unchanged throughout this
+commotion.</p>
+<p>Note that while creating strings at runtime can be somewhat expensive compared to 
+numbers, booleans and nils, comparing strings with the <code>==</code> operator is nearly as
+fast as comparing numbers. 
+This is because vyse performs string interning to keep
+string comparisons fast and efficient.</p>
+<h2 id="list"><a class="header" href="#list">List</a></h2>
+<p>Lists are similar to dynamic arrays in other programming languages.
+A list is declared by putting comma separated elements inside of <code>[</code>
+and <code>]</code>.</p>
+<ul>
+<li>The <code>#</code> operator is used to get the length of a list.</li>
+<li>Lists are indexed from <code>0</code>.</li>
+<li>The size of lists can change at runtime.</li>
+<li>Indexing a list with an invalid index (-1 or a value greater than it's length) will throw an error.</li>
+</ul>
+<pre><code class="language-vyse">let arr = [1, 2, 3]
+for el in arr {
+  print(el)
+}
+</code></pre>
+<p><strong>Common methods and functions on lists</strong>:</p>
+<ul>
+<li><code>list:push(item)</code>: Appends <code>item</code> to the end of the list.</li>
+<li><code>list:pop()</code>: Removes the last item from the list and returns it.</li>
+<li><code>len(list)</code>:  Returns the length of the list.</li>
+<li><code>list:map(fn)</code>: Creates a new list <code>ls</code> where <code>ls[i]</code> is <code>fn(list[i])</code></li>
+</ul>
+<p>For more methods and free functions to operate on lists, refer to the standard library
+documentation.</p>
+<h2 id="table"><a class="header" href="#table">Table</a></h2>
+<p>Tables are vyse's core data structure used to store key-value pairs. 
+They're similar to <code>Map</code>s in JavaScript or tables in Lua.</p>
+<pre><code class="language-vyse">const point = { x: 1, y: 2 }
+print(point['x'], point.y) -- 1 2
+</code></pre>
+<p>Tables are rather simple data structures in terms of usage, but they can
+prove to be very powerful. We will see in the coming sections how tables
+can be used to model OOP like encapsulation.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../lang-basics/variables.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../object-model/oop.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../lang-basics/variables.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../object-model/oop.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
