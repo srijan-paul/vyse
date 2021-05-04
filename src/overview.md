@@ -1,13 +1,13 @@
 # Cheatsheet 
 
-This section contains a brief overview of the Snap. If you have some prior experience with programming in C or JS like languages, this should help you cover the basics pretty quickly!
+This section contains a brief overview of the Vyse. If you have some prior experience with programming in C or JS like languages, this should help you cover the basics pretty quickly!
 
 If not, consider this snippet am "Eagle eye view" of the territory. You can copy and paste the following snippet into a file and play around with it.
 
-```snap
+```vyse
 -- comments begin with '--' and are ignored by 
 -- the interpreter.
-print("Welcome to Snap!")
+print("Welcome to Vyse!")
 
 -- constants declared with the 'const' keyword
 const pi = 3.1415162
@@ -80,24 +80,24 @@ for el in array
   print(el)
 
 
--- Metatables is a concept that can help
--- simulate OOP in snap.
+-- Prototypes are a concept that can help
+-- simulate OOP in vyse.
 
 const t = { a: 1, b: 2 }
 print(t.c) -- nil
 
 -- When a key is not found within the
 -- set of the object's own properties,
--- snap will search the object's 'metatable'
+-- vyse will search the object's 'prototype'
 -- (if any) for the property.
 
 const mt = { b: 10, c: 3 }
-setmetatable(t, mt)
+setproto(t, mt)
 print(t.c) -- 3
 print(t.b) -- 2
 
 -- Note that a search for a key always begins at
--- the object itself and goes up the metatable chain,
+-- the object itself and goes up the prototype chain,
 -- so t.b is still 2.
 
 -- OOP
@@ -136,4 +136,4 @@ bob:make_sound() 'Hi!'
 
 ```
 
-Note that the cheatsheet above is meant to be an 'overview' and therefore does not include all the features, constructs and details about Snap.
+Note that the cheatsheet above is meant to be an 'overview' and therefore does not include all the features, constructs and details about Vyse.

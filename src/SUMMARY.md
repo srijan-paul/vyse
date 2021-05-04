@@ -1,20 +1,18 @@
 # Summary
 
-[Introduction](./introduction.md)
-[Cheatsheet](./overview.md)
-# Language Basics
-- [Syntax](./lang-basics/syntax.md)
-- [Variables](./lang-basics/variables.md)
-- [Data Types](./lang-basics/primitives.md)
+- [Introduction](./introduction.md)
+  - [Cheatsheet](./overview.md)
+  - [Syntax](./lang-basics/syntax.md)
+  - [Variables](./lang-basics/variables.md)
+  - [Data Types](./lang-basics/primitives.md)
 
-# Object Model
-- [Metatables](./object-model/metatables.md)
-- [Methods](./object-model/methods.md)
-- [OOP with tables](./object-model/oop-tables.md)
-- [Operator Overloading](./object-model/op-overload.md)
-- [Classes and Inheritance](./object-model/classes.md)
+- [OOP](./object-model/oop.md)
+  - [Prototypes](./object-model/prototype.md)
+  - [Methods](./object-model/methods.md)
+  - [OOP with tables](./object-model/oop-tables.md)
+  - [Operator Overloading](./object-model/op-overload.md)
+  - [Classes and Inheritance](./object-model/classes.md)
 
-# Functional Model
 - [Higher Order Functions](./functional/hof.md)
 
 # Standard Library

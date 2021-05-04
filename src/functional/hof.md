@@ -4,7 +4,7 @@ Functions in class enjoy first class privelege.
 All functions can be passed around as arguments, declared in nested scopes
 and returned from other functions just like string and number values.
 
-```snap
+```vyse
 fn make_adder(x) {
   return fn(y) {
     return x + y
@@ -21,10 +21,10 @@ able to use the variable `x` even after it goes out of scope.
 Functions are able to capture their lexically enclosing environments
 and therefore and use variables even after they go out of scope.
 
-All functions in snap have this property, and are therefore called
+All functions in vyse have this property, and are therefore called
 'Closures'.
 
-```snap
+```vyse
 fn func() {
   let value = 10
   return {

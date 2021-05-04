@@ -885,7 +885,7 @@ var hljs = (function () {
 "object" == typeof exports && "undefined" != typeof module && (module.exports = hljs);
 
 hljs.registerLanguage(
-  "snap",
+  "vyse",
   (function () {
     "use strict";
     const e = [
@@ -985,8 +985,8 @@ hljs.registerLanguage(
           contains: b,
         };
       return {
-        name: "Snap",
-        aliases: ["snap", "snp"],
+        name: "Vyse",
+        aliases: ["vyse", "vy"],
         keywords: o,
         contains: [
           t.SHEBANG({ binary: "node", relevance: 5 }),

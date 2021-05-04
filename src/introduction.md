@@ -1,11 +1,11 @@
 # Introduction
 
-Snap is a general purpose programming language inspired by Lua, and is designed for
+Vyse is a general purpose programming language inspired by Lua, and is designed for
 embedding in C++ applications such as game engines.
 
 ## Design goals.
 
-From the very first day of development, snap has been made with certain specific design goals in mind.
+From the very first day of development, Vyse has been made with certain specific design goals in mind.
 
 - Familiar to programmers coming from JavaScript or the C-family of languages.
 - Simple in terms of language features that the programmer has to keep in mind.

@@ -1,9 +1,9 @@
 ## Variables 
 
-Variable in Snap come in two flavors, mutable and immuatble.
+Variable come in two flavors, mutable and immuatble.
 Immutable variables once declared, cannot be re-assigned to.
 
-```snap
+```vyse
 const myvar = 10
 myvar = 20 -- Error: Attempt to mutate a variable declared 'const'.
 
@@ -14,7 +14,7 @@ my_other_var = 20 -- Ok
 Note however, that variables that are `const` can still be mutated
 if they are not primitive data types. Only re-assignment is forbidden.
 
-```snap
+```vyse
 const my_table = { my_key: 'my_value' }
 my_table.my_key = 123 -- ok
 
@@ -28,7 +28,7 @@ A global variable is accessible everywhere and is shared across modules.
 A local variable is scoped to it's surrounding block.
 
 
-```snap
+```vyse
 global x = 'global'
 let y = 'local'
 
@@ -44,10 +44,10 @@ let y = 'local'
 print(x, y, z) -- global local nil
 ```
 
-All global variables in snap can be found in special predefined table called '`_G`'.
+All global variables in vyse can be found in special predefined table called '`_G`'.
 They can therefore me modified and accessed from the table itself.
 
-```snap
+```vyse
 _G.x = 42
 print(x) -- 42
 ```

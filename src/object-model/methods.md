@@ -2,7 +2,7 @@
 
 Tables can have properties that are functions. Functions can either be invoked normally by
 accessing them or by using the `:` operator. When called using `:`, the functions behave as methods.
-```snap
+```vy
 const cat = {
   sound: 'meow'
   speak: fn (self) {
@@ -24,7 +24,7 @@ also suffices.
 To make methods look more natural and convenient, there exists a short-hand
 syntax.
 
-```snap
+```vyse
 const dog = {
   sound: 'woof!',
   speak() {
@@ -46,7 +46,7 @@ syntax.
 Methods can be declared outside the table's body with the usual function
 definition syntax.
 
-```snap
+```vyse
 const cat = { sound = 'meow' }
 
 fn cat:meow() {

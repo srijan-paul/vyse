@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+:root {
+  --fg-primary: #323330;
+  --innert-width: 70%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: "Rubik", sans-serif;
+}
+
+.content {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  width: var(--innert-width);
+  margin: auto;
+  margin-top: 10%;
+}
+
+.header-left {
+  display: flex;
+}
+
+.header-left > img {
+  width: 250px;
+}
+
+.header-right {
+  margin-top: 5%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  gap: 0.7em;
+}
+
+.header-right > .vyse-title {
+  font-size: 2em;
+  /* font-family: 'Advent Pro'; */
+}
+
+/* Buttons */
+
+.btn-list {
+  width: var(--innert-width);
+	display: flex;
+	margin: auto;
+	margin-top: 1%;
+	padding-left: 2%;
+	gap: 3%;
+	text-align: center;
+}
+
+.btn {
+  text-transform: uppercase;
+  border: 1px solid black;
+  color: white;
+  width: max-content;
+  background-color: var(--fg-primary);
+  font-size: 1.4em;
+	border-radius: 25px;
+  padding: 0.2em 0.65em;
+	display: flex;
+	align-items: center;
+	transition-duration: 300ms;
+}
+
+.btn > img {
+	padding-right: 0.4em;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: var(--fg-primary);
+}
+
+#discord-btn {
+  background-color: #7289da;
+  border-color: #7289da;
+}
+
+#discord-btn:hover {
+  background-color: white;
+  color: #7289da;
+}
+
+@media only screen and (max-width: 1060px) {
+
+	.content {
+		width: 100%;
+	}
+
+	:root {
+		--inner-width: 95%;
+	}
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+	.header-left > img {
+		max-width: 250px;
+	}
+
+  .header-left {
+    width: 100%;
+    margin: auto;
+  }
+
+  .header-left > img {
+    width: 50%;
+    margin: auto;
+  }
+
+  .header-right {
+		width: 100%;
+    text-align: center;
+		font-size: 1.2em;
+  }
+
+	.btn-list {
+		padding-top: 4%;
+		display: inline-block;
+		margin: auto;
+	}
+
+	.btn-list > .btn {
+		margin: auto;
+		margin-bottom: 2%;
+		font-size: 1.2em;
+	}
+
+
+}
+
+
+@media only screen and (max-width: 650px) {
+	.header {
+		width: 85%;
+		font-size: 0.95em;
+	}
+}

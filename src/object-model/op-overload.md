@@ -1,6 +1,6 @@
 # Operator Overloading
 
-Snap has several logical and arithmetic operators.
+Vyse has several logical and arithmetic operators.
 The behavior of these operators are well defined when the operands
 are of the expected data types (e.g `number` operands for `+`).
 
@@ -12,11 +12,11 @@ operators for user-defined data types.
 Let us recollect the implementation of a simple Vector class defined
 [earlier](./oop-tables.html).
 
-```snap
+```vyse
 const Vec2 = {
   make(x, y) {
     const v = {x: x, y: y}
-    setmeta(v, self)
+    setproto(v, self)
     return v
   }
 
@@ -29,7 +29,7 @@ Vectors are very often used in data visualization and game programming.
 We would like to include the functionality to add together two vectors.
 This can very easily be done by attaching a method.
 
-```snap
+```vyse
 fn Vec2.add(a, b) {
   return Vec2:make(a.x + b.x, a.y + b.y)
 }
@@ -38,7 +38,7 @@ fn Vec2.add(a, b) {
 We can now add together vectors by calling this method that behaves like a
 static member.
 
-```snap
+```vyse
 const a = Vec2:make(1, 2)
 const b = Vec2:make(2, 3)
 
@@ -48,23 +48,23 @@ print(c.x, c.y) --  3 5
 
 It is often advantageous to both the programmer and the reader to use the usual
 mathematical symbols (here `+`) when defining such constructs. For instance, many
-would prefer `a + b` over `Vec2.add(a, b)`. This is made possible in snap with the
-help of meta methods. For the `+` operator, the `__add` metamethod is used.
+would prefer `a + b` over `Vec2.add(a, b)`. This is made possible in vyse with the
+help of proto-methods. For the `+` operator, the `__add` proto-method is used.
 
-```snap
+```vyse
 fn Vec2.__add(a, b) {
   return Vec2:make(a.x + b.x, a.y + b.y)
 }
 ```
 
-Once a metamethod is defined on an object's metatable, this is called whenever
-the event associated with the metamethod is invoked. Now, we can add together
+Once a proto-method is defined on an object's prototype, this is called whenever
+the event associated with the protomethod is invoked. Now, we can add together
 vectors with the `+` operator. 
 
 (Note that we use `Vec2.__add` when defining the method instead of `:`. We do not
-want any hidden `self` parameter in the metamethod)
+want any hidden `self` parameter in the protomethod)
 
-```snap
+```vyse
 const a = Vec2:make(1, 2)
 const b = Vec2:make(2, 3)
 
