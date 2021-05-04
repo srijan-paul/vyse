@@ -1,15 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Rubik&family=JetBrains+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Rubik&family=JetBrains+Mono&display=swap");
 
 :root {
   --fg-primary: #323330;
   --inner-width: 70%;
+  --blu: #086684;
 }
 
 body {
   margin: 0;
   padding: 0;
   border: none;
-  font-family: 'Fira Sans', monospace;
+  font-family: "Open Sans", monospace;
+  font-weight: 300;
   line-height: 1.5;
 }
 
@@ -26,7 +28,7 @@ body {
   display: flex;
   width: var(--inner-width);
   margin: auto;
-  margin-top: 10%;
+  margin-top: 7%;
   margin-bottom: 2%;
 }
 
@@ -43,18 +45,19 @@ body {
   text-align: left;
   display: flex;
   flex-direction: column;
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 .header-right > .vyse-title {
-  font-size: 2em;
-  font-family: 'Rubik';
+  font-size: 1.8em;
+  font-family: "Rubik";
 }
 
-.links > a {
+.links > .link {
   display: inline-block;
   margin-right: 10px;
 }
+
 
 /* Buttons */
 
@@ -68,14 +71,15 @@ body {
   text-align: center;
 }
 
-.btn {
+.btn, .btn:visited {
   text-transform: uppercase;
   border: 1px solid black;
+  text-decoration: none;
   color: white;
   width: max-content;
   background-color: var(--fg-primary);
   font-size: 1.2em;
-  font-family: 'Rubik', Arial;
+  font-family: "Rubik", Arial;
   border-radius: 25px;
   padding: 0.2em 0.65em;
   display: flex;
@@ -108,7 +112,7 @@ body {
   width: var(--inner-width);
   margin: auto;
   /* margin-top: 4%; */
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .header-left {
@@ -124,7 +128,7 @@ body {
   text-align: left;
   display: flex;
   flex-direction: column;
-  font-size: 1.2em;
+  font-size: 1.1em;
   gap: 0.7em;
 }
 
@@ -149,15 +153,23 @@ hr {
   margin-top: 3%;
 }
 
+b {
+  font-weight: 600;
+}
+
+ul > li {
+  margin-bottom: 1.5%;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  text-decoration: underline gray;
+  text-decoration: underline #086684;
   text-decoration-thickness: 0.15em;
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-weight: 500;
 }
 
@@ -165,14 +177,35 @@ h1:hover,
 h2:hover,
 h3:hover,
 h4:hover {
-  text-decoration-color: #086684;
   cursor: pointer;
+}
+
+footer {
+  min-height: 10vh;
+  display: flex;
+  background-color: #323330;
+  color: white;
+  align-items: center;
+}
+
+footer > div {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+footer a {
+  color: cyan;
+}
+
+.heart {
+  color: red;
 }
 
 /* code snippets */
 
 .hljs {
-  font-size: 80%;
+  font-size: 94%;
   background-color: hsl(210, 0%, 99%);
 }
 
@@ -238,6 +271,6 @@ h4:hover {
   }
 
   .main {
-    font-size: 110%;
+    font-size: 100%;
   }
 }

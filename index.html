@@ -1,59 +1,60 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
 
-    <title>Vyse</title>
-    <meta name="description" content="The HTML5 Herald" />
-    <meta name="Srijan Paul" content="SitePoint" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="book/highlight.css" type="text/css" />
-    <link rel="stylesheet" href="book/css/variables.css" type="text/css" />
-    <link rel="stylesheet" href="style.css" type="text/css" />
-  </head>
+<head>
+  <meta charset="utf-8" />
 
-  <body>
-    <div class="content">
-      <div class="header">
-        <div class="header-left">
-          <img src="./media/vyse_logo.svg" alt="Vyse logo" />
+  <title>Vyse</title>
+  <meta name="description" content="The Vyse programming language" />
+  <meta name="author" content="Srijan Paul" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="book/highlight.css" type="text/css" />
+  <link rel="stylesheet" href="book/css/variables.css" type="text/css" />
+  <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+  <div class="content">
+    <div class="header">
+      <div class="header-left">
+        <img src="./media/vyse_logo.svg" alt="Vyse logo" />
+      </div>
+      <div class="header-right">
+        <div class="vyse-title">The Vyse programming language</div>
+
+        <div class="about">
+          A dynamically typed and interpreted scripting language. Vyse is
+          readily embedabble and intended for use in embedded scripting
+          environments such as web servers and game engines.
         </div>
-        <div class="header-right">
-          <div class="vyse-title">The Vyse programming language</div>
 
-          <div class="about">
-            A dynamically typed and interpreted scripting language. Vyse is
-            readily embedabble and intended for use in embedded scripting
-            environments such as web servers and game engines.
-          </div>
-
-          <div class="links">
-            <a href="./book">Docs</a>
-            <a href="https://srijan-paul.github.io/blog">Posts</a>
-          </div>
+        <div class="links">
+          <a class="link" href="./book">Docs</a>
+          <a class="link" href="https://srijan-paul.github.io/blog">Posts</a>
         </div>
       </div>
+    </div>
 
-      <div class="btn-list">
-        <div class="btn" id="discord-btn">
-          <img src="./media/discord.svg" alt="discord" width="25px" />
-          <span>join discord</span>
-        </div>
-        <div class="btn" id="github-btn">
-          <img src="./media/github.png" alt="discord" width="25px" />
-          <span>view on github</span>
-        </div>
-      </div>
+    <div class="btn-list">
+      <a class="btn" id="discord-btn" href="https://discord.gg/qvtfJXJMRH" target="_blank">
+        <img src="./media/discord.svg" alt="discord" width="25px" />
+        <span>join discord</span>
+      </a>
+      <a class="btn" id="github-btn" href="https://github.com/srijan-paul/snap/tree/cleanup" target="_blank">
+        <img src="./media/github.png" alt="discord" width="25px" />
+        <span>view on github</span>
+      </a>
+    </div>
 
-      <hr>
+    <hr>
 
-      <div class="main">
-        <h2>Welcome!</h2>
-        Say hello to Vyse, a fast, compact and embedabble scripting language.
-        Let's start by answering the first question on your mind, "What does it look like?"
-        For starters, here is the mergesort algorithm written in vyse:
-<pre>
+    <div class="main">
+      <h2>Welcome!</h2>
+      Say hello to Vyse, a fast, compact and embedabble scripting language.
+      Let's start by answering the first question on your mind, "What does it look like?"
+      For starters, here is the mergesort algorithm written in vyse:
+      <pre>
 <code class="language-vyse msort">
 fn merge(left, right, sorted) {
   let lptr = 0, rptr = 0
@@ -94,63 +95,99 @@ fn merge_sort(arr) {
 </code>
 </pre>
 
-<h2>What else?</h2>
+      <h2>What else?</h2>
 
-<p>
-  The key selling points of Vyse are:
-  <ul>
-    <li>Stuff</li>
-    <li>Stuff</li>
-    <li>Stuff</li>
-    <li>Stuff</li>
-  </ul>
-</p>
+      <p>
+        The key selling points of Vyse are:
+      <ul>
+        <li>
+          <b>Readily embedabble.</b> Vyse integrates seamlessly with C++, and has a modern API.
+          It's very simple to call C++ functions from Vyse and vice versa.
+        </li>
+        <li><b>Familiar, Powerful.</b> One of the leading design choices for Vyse was to take the good parts
+          from javascript and lua, and combine them into a lovely little language. Vyse takes from Lua's minimalism,
+          Javascript's friendly syntax and borrows some ideas from the object models of both the languages.</li>
+        <li><b>Lightweight.</b> Snap is very lightweight with minimal libc++ footprint.
+          The standard library is entirely optional, allowing it
+          to be ported to new environments rather quickly.
+        </li>
+        <li><b>Prototypical inheritance.</b> Vyse allows OOP via prototypes. The idea is a mix of what JS and Lua
+          provide. There is still syntactic sugar for classes and useful constructs like operator overloading
+          and iterators.</li>
+      </ul>
+      </p>
 
-      </div>
+      <h2>Why make yet another language?</h2>
+      <p>
+        Honestly speaking, Vyse is primarily a hobby project being developed for the pure joy of making
+        a language tailored entirely to my taste. Now that we have that established, I want to also state that while it
+        is primarily a hobby project, it does not fall short of a full featured and useable language by any means.
+      </p>
 
-      <script
-        src="./book/highlight.js"
-        type="text/javascript"
-        charset="utf-8"
-      ></script>
-      <script>
-        hljs.configure({
-          tabReplace: "  ", // 2 spaces
-          languages: [], // Languages used for auto-detection
-        });
+      <p>
+        Vyse has been built for embedding in <b>real</b> applications. Web servers and game engines are the first
+        things to come to mind, but snap can run on any platform that has C++ and a small subset of it's standard
+        library.
+      </p>
 
-        let code_nodes = Array.from(document.querySelectorAll("code"))
-          // Don't highlight `inline code` blocks in headers.
-          .filter(function (node) {
-            return !node.parentElement.classList.contains("header");
-          });
+      <p>
+        Lastly, as you will realize when reading the <a href="./book">docs</a>, vyse should feel very familiar
+        if you have prior experience writing Javascript or Lua. In the docs. you can read more about the quirks
+        and eccentricities of aforementioned languages that Vyse got rid of, and the ideas that it built upon further.
+      </p>
 
-        if (window.ace) {
-          // language-rust class needs to be removed for editable
-          // blocks or highlightjs will capture events
-          Array.from(document.querySelectorAll("code.editable")).forEach(
-            function (block) {
-              block.classList.remove("language-rust");
-            }
-          );
 
-          Array.from(document.querySelectorAll("code:not(.editable)")).forEach(
-            function (block) {
-              hljs.highlightBlock(block);
-            }
-          );
-        } else {
-          code_nodes.forEach(function (block) {
-            hljs.highlightBlock(block);
-          });
-        }
 
-        // Adding the hljs class gives code blocks the color css
-        // even if highlighting doesn't apply
-        code_nodes.forEach(function (block) {
-          block.classList.add("hljs");
-        });
-      </script>
     </div>
-  </body>
+
+
+
+    <script src="./book/highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+      hljs.configure({
+        tabReplace: "  ", // 2 spaces
+        languages: [], // Languages used for auto-detection
+      });
+
+      let code_nodes = Array.from(document.querySelectorAll("code"))
+        // Don't highlight `inline code` blocks in headers.
+        .filter(function (node) {
+          return !node.parentElement.classList.contains("header");
+        });
+
+      if (window.ace) {
+        // language-rust class needs to be removed for editable
+        // blocks or highlightjs will capture events
+        Array.from(document.querySelectorAll("code.editable")).forEach(
+          function (block) {
+            block.classList.remove("language-rust");
+          }
+        );
+
+        Array.from(document.querySelectorAll("code:not(.editable)")).forEach(
+          function (block) {
+            hljs.highlightBlock(block);
+          }
+        );
+      } else {
+        code_nodes.forEach(function (block) {
+          hljs.highlightBlock(block);
+        });
+      }
+
+      // Adding the hljs class gives code blocks the color css
+      // even if highlighting doesn't apply
+      code_nodes.forEach(function (block) {
+        block.classList.add("hljs");
+      });
+    </script>
+  </div>
+
+    <footer>
+      <div class="footer-text">
+        Made with <span class="heart">❤</span> ️by <a href="https://srijan-paul.github.io">Srijan Paul</a>.
+      </div>
+    </footer>
+</body>
+
 </html>
