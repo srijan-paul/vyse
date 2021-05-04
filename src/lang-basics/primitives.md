@@ -1,6 +1,6 @@
 ## Data Types 
 
-In totalap vyse provides the following native data types:
+In totala vyse provides the following native data types:
 1. number
 2. boolean
 3. nil 
@@ -126,7 +126,7 @@ For more methods and free functions to operate on lists, refer to the standard l
 documentation.
 
 ## Table
-Tables are vyse's core data structure used to store key-value pairs. 
+Tables are Vyse's core data structure used to store key-value pairs. 
 They're similar to `Map`s in JavaScript or tables in Lua.
 
 ```vyse

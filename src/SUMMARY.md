@@ -16,7 +16,6 @@
 - [Higher Order Functions](./functional/hof.md)
 
 # Standard Library
-
 - [string](./stdlib/strings.md)
 - [list](./stdlib/List.md)
 - [table](./stdlib/table.md)

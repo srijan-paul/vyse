@@ -1,9 +1,9 @@
 # Prototypes 
 
-Protoypes are the core feature of Snap's object model. Every table has 
+Prototypes are the core feature of Vyse's object model. Every table has 
 a "prototype" table (also called proto-table).
 By default, the prototype is `nil`.
-When a queried property is missing from a table, it's prototype chain is queried bottom up for the same key.
+When a queried property is missing from a table, its prototype chain is queried bottom up for the same key.
 
 ```snap
 const tbl   = { a: 1, b: 2 }

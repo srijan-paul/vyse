@@ -2,7 +2,7 @@
 
 This section contains a brief overview of the Vyse. If you have some prior experience with programming in C or JS like languages, this should help you cover the basics pretty quickly!
 
-If not, consider this snippet am "Eagle eye view" of the territory. You can copy and paste the following snippet into a file and play around with it.
+If not, consider this snippet an "Eagle eye view" of the territory. You can copy and paste the following snippet into a file and play around with it.
 
 ```vyse
 -- comments begin with '--' and are ignored by 

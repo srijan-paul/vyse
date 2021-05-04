@@ -33,7 +33,7 @@ print(pet) -- 'rabbit'
 
 ### Strings
 
-Strings in vyse are surrounded either in single quote or double quotes,
+Strings in Vyse are surrounded either in single quote or double quotes,
 and may contain newlines. Note that strings can only contain ASCII characters
 at the moment, and you will have to use utf8 library to work with strings containing
 utf8 characters.

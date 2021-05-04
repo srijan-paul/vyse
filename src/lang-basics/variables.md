@@ -1,6 +1,6 @@
 ## Variables 
 
-Variable come in two flavors, mutable and immuatble.
+Variable come in two flavors, mutable and immutable.
 Immutable variables once declared, cannot be re-assigned to.
 
 ```vyse
@@ -25,7 +25,7 @@ my_table = {} -- Error: Attempt to mutate a variable declared 'const'.
 
 Another way to categorize variables is either as 'locals' or 'globals'.
 A global variable is accessible everywhere and is shared across modules.
-A local variable is scoped to it's surrounding block.
+A local variable is scoped to its surrounding block.
 
 
 ```vyse
@@ -44,7 +44,7 @@ let y = 'local'
 print(x, y, z) -- global local nil
 ```
 
-All global variables in vyse can be found in special predefined table called '`_G`'.
+All global variables in Vyse can be found in special predefined table called '`_G`'.
 They can therefore me modified and accessed from the table itself.
 
 ```vyse

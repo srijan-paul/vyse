@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Variables - Snap Documentation</title>
+        <title>Variables - Vyse Documentation</title>
         
         
 
@@ -127,7 +127,7 @@
                         
                     </div>
 
-                    <h1 class="menu-title">Snap Documentation</h1>
+                    <h1 class="menu-title">Vyse Documentation</h1>
 
                     <div class="right-buttons">
                         
@@ -164,7 +164,7 @@
                 <div id="content" class="content">
                     <main>
                         <h2 id="variables"><a class="header" href="#variables">Variables</a></h2>
-<p>Variable come in two flavors, mutable and immuatble.
+<p>Variable come in two flavors, mutable and immutable.
 Immutable variables once declared, cannot be re-assigned to.</p>
 <pre><code class="language-vyse">const myvar = 10
 myvar = 20 -- Error: Attempt to mutate a variable declared 'const'.
@@ -182,7 +182,7 @@ my_table = {} -- Error: Attempt to mutate a variable declared 'const'.
 <h2 id="globals-and-locals"><a class="header" href="#globals-and-locals">Globals and Locals.</a></h2>
 <p>Another way to categorize variables is either as 'locals' or 'globals'.
 A global variable is accessible everywhere and is shared across modules.
-A local variable is scoped to it's surrounding block.</p>
+A local variable is scoped to its surrounding block.</p>
 <pre><code class="language-vyse">global x = 'global'
 let y = 'local'
 
@@ -197,7 +197,7 @@ let y = 'local'
 
 print(x, y, z) -- global local nil
 </code></pre>
-<p>All global variables in vyse can be found in special predefined table called '<code>_G</code>'.
+<p>All global variables in Vyse can be found in special predefined table called '<code>_G</code>'.
 They can therefore me modified and accessed from the table itself.</p>
 <pre><code class="language-vyse">_G.x = 42
 print(x) -- 42

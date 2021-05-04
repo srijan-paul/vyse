@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Snap Documentation</title>
+        <title>Vyse Documentation</title>
         
         <meta name="robots" content="noindex" />
         
@@ -129,7 +129,7 @@
                         
                     </div>
 
-                    <h1 class="menu-title">Snap Documentation</h1>
+                    <h1 class="menu-title">Vyse Documentation</h1>
 
                     <div class="right-buttons">
                         
@@ -169,14 +169,14 @@
 <p>Vyse is a general purpose programming language inspired by Lua, and is designed for
 embedding in C++ applications such as game engines.</p>
 <h2 id="design-goals"><a class="header" href="#design-goals">Design goals.</a></h2>
-<p>From the very first day of development, Vyse has been made with certain specific design goals in mind.</p>
+<p>From the very first day of development, Vyse has been made with specific design goals in mind.</p>
 <ul>
 <li>Familiar to programmers coming from JavaScript or the C-family of languages.</li>
-<li>Simple in terms of language features that the programmer has to keep in mind.</li>
-<li>Powerful and flexible in terms of paradigm.</li>
+<li>Minimalistic design</li>
+<li>Powerful and flexible paradigm.</li>
 <li>Light and noise-free syntax.</li>
 <li>Easy to embed in C++ applications and link statically.</li>
-<li>Similar feature set and easy learning curve resembling Lua.</li>
+<li>Similar feature set and the easy learning curve of Lua.</li>
 </ul>
 <h2 id="alternatives"><a class="header" href="#alternatives">Alternatives.</a></h2>
 <p>Want to explore other options? Fortunately there are several languages for embeddable scripting.
@@ -192,7 +192,7 @@ A few you might find fun to explore are:</p>
 </ul>
 <h1 id="cheatsheet"><a class="header" href="#cheatsheet">Cheatsheet</a></h1>
 <p>This section contains a brief overview of the Vyse. If you have some prior experience with programming in C or JS like languages, this should help you cover the basics pretty quickly!</p>
-<p>If not, consider this snippet am &quot;Eagle eye view&quot; of the territory. You can copy and paste the following snippet into a file and play around with it.</p>
+<p>If not, consider this snippet an &quot;Eagle eye view&quot; of the territory. You can copy and paste the following snippet into a file and play around with it.</p>
 <pre><code class="language-vyse">-- comments begin with '--' and are ignored by 
 -- the interpreter.
 print(&quot;Welcome to Vyse!&quot;)
@@ -349,7 +349,7 @@ print(pet) -- 'rabbit'
 
 </code></pre>
 <h3 id="strings"><a class="header" href="#strings">Strings</a></h3>
-<p>Strings in vyse are surrounded either in single quote or double quotes,
+<p>Strings in Vyse are surrounded either in single quote or double quotes,
 and may contain newlines. Note that strings can only contain ASCII characters
 at the moment, and you will have to use utf8 library to work with strings containing
 utf8 characters.</p>
@@ -367,7 +367,7 @@ These words are reserved and cannot be used as variable names.</p>
 class true false if else
 </code></pre>
 <h2 id="variables"><a class="header" href="#variables">Variables</a></h2>
-<p>Variable come in two flavors, mutable and immuatble.
+<p>Variable come in two flavors, mutable and immutable.
 Immutable variables once declared, cannot be re-assigned to.</p>
 <pre><code class="language-vyse">const myvar = 10
 myvar = 20 -- Error: Attempt to mutate a variable declared 'const'.
@@ -385,7 +385,7 @@ my_table = {} -- Error: Attempt to mutate a variable declared 'const'.
 <h2 id="globals-and-locals"><a class="header" href="#globals-and-locals">Globals and Locals.</a></h2>
 <p>Another way to categorize variables is either as 'locals' or 'globals'.
 A global variable is accessible everywhere and is shared across modules.
-A local variable is scoped to it's surrounding block.</p>
+A local variable is scoped to its surrounding block.</p>
 <pre><code class="language-vyse">global x = 'global'
 let y = 'local'
 
@@ -400,7 +400,7 @@ let y = 'local'
 
 print(x, y, z) -- global local nil
 </code></pre>
-<p>All global variables in vyse can be found in special predefined table called '<code>_G</code>'.
+<p>All global variables in Vyse can be found in special predefined table called '<code>_G</code>'.
 They can therefore me modified and accessed from the table itself.</p>
 <pre><code class="language-vyse">_G.x = 42
 print(x) -- 42
@@ -409,7 +409,7 @@ print(x) -- 42
 they're nearly the same as locals. To answer this, we will explore global variables
 further in a later section.</p>
 <h2 id="data-types"><a class="header" href="#data-types">Data Types</a></h2>
-<p>In totalap vyse provides the following native data types:</p>
+<p>In totala vyse provides the following native data types:</p>
 <ol>
 <li>number</li>
 <li>boolean</li>
@@ -513,7 +513,7 @@ for el in arr {
 <p>For more methods and free functions to operate on lists, refer to the standard library
 documentation.</p>
 <h2 id="table"><a class="header" href="#table">Table</a></h2>
-<p>Tables are vyse's core data structure used to store key-value pairs. 
+<p>Tables are Vyse's core data structure used to store key-value pairs. 
 They're similar to <code>Map</code>s in JavaScript or tables in Lua.</p>
 <pre><code class="language-vyse">const point = { x: 1, y: 2 }
 print(point['x'], point.y) -- 1 2
@@ -524,14 +524,14 @@ can be used to model OOP like encapsulation.</p>
 <h1 id="oop-in-vyse"><a class="header" href="#oop-in-vyse">OOP in Vyse.</a></h1>
 <p>Vyse has a flexible yet powerful object model.
 Prototype based inheritance is one of the language's core features.</p>
-<p>As with everything else, the OOP in vyse is a cherry-picked combination of
+<p>As with everything else, the OOP in Vyse is a cherry-picked combination of
 features from Javascript and Lua, with some icing on top.</p>
 <p>Continue reading to learn more about Object Oriented Programming in Vyse.</p>
 <h1 id="prototypes"><a class="header" href="#prototypes">Prototypes</a></h1>
-<p>Protoypes are the core feature of Snap's object model. Every table has 
+<p>Prototypes are the core feature of Vyse's object model. Every table has 
 a &quot;prototype&quot; table (also called proto-table).
 By default, the prototype is <code>nil</code>.
-When a queried property is missing from a table, it's prototype chain is queried bottom up for the same key.</p>
+When a queried property is missing from a table, its prototype chain is queried bottom up for the same key.</p>
 <pre><code class="language-snap">const tbl   = { a: 1, b: 2 }
 const proto = { c: 3, d: 4 }
 
@@ -666,7 +666,7 @@ spleen:attack('squee') -- stole 2 gold from squee
 </code></pre>
 <p>Our character spleen is now able to exhibit the behavior of both an Enemy and a Goblin.
 This simple object modelling strategy can be expanded to multiple facets of software
-architechture in vyse.</p>
+architecture in Vyse.</p>
 <h1 id="operator-overloading"><a class="header" href="#operator-overloading">Operator Overloading</a></h1>
 <p>Vyse has several logical and arithmetic operators.
 The behavior of these operators are well defined when the operands

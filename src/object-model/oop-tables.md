@@ -94,4 +94,4 @@ spleen:attack('squee') -- stole 2 gold from squee
 
 Our character spleen is now able to exhibit the behavior of both an Enemy and a Goblin.
 This simple object modelling strategy can be expanded to multiple facets of software
-architechture in vyse.
+architecture in Vyse.
