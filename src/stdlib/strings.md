@@ -1,3 +1,0 @@
-# Strings
-
-__[TODO]__
