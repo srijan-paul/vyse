@@ -97,7 +97,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="overview.html"><strong aria-hidden="true">1.1.</strong> Cheatsheet</a></li><li class="chapter-item expanded "><a href="lang-basics/syntax.html"><strong aria-hidden="true">1.2.</strong> Syntax</a></li><li class="chapter-item expanded "><a href="lang-basics/variables.html"><strong aria-hidden="true">1.3.</strong> Variables</a></li><li class="chapter-item expanded "><a href="lang-basics/primitives.html"><strong aria-hidden="true">1.4.</strong> Data Types</a></li></ol></li><li class="chapter-item expanded "><a href="object-model/oop.html"><strong aria-hidden="true">2.</strong> OOP</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="object-model/prototype.html"><strong aria-hidden="true">2.1.</strong> Prototypes</a></li><li class="chapter-item expanded "><a href="object-model/methods.html"><strong aria-hidden="true">2.2.</strong> Methods</a></li><li class="chapter-item expanded "><a href="object-model/oop-tables.html"><strong aria-hidden="true">2.3.</strong> OOP with tables</a></li><li class="chapter-item expanded "><a href="object-model/op-overload.html"><strong aria-hidden="true">2.4.</strong> Operator Overloading</a></li><li class="chapter-item expanded "><a href="object-model/classes.html"><strong aria-hidden="true">2.5.</strong> Classes and Inheritance</a></li></ol></li><li class="chapter-item expanded "><a href="functional/hof.html"><strong aria-hidden="true">3.</strong> Higher Order Functions</a></li><li class="chapter-item expanded "><a href="stdlib/stdlib.html"><strong aria-hidden="true">4.</strong> Standard Library</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="stdlib/string.html"><strong aria-hidden="true">4.1.</strong> String</a></li><li class="chapter-item expanded "><a href="stdlib/List.html"><strong aria-hidden="true">4.2.</strong> List</a></li><li class="chapter-item expanded "><a href="stdlib/math.html"><strong aria-hidden="true">4.3.</strong> math</a></li><li class="chapter-item expanded "><a href="stdlib/io.html"><strong aria-hidden="true">4.4.</strong> io</a></li><li class="chapter-item expanded "><a href="stdlib/os.html"><strong aria-hidden="true">4.5.</strong> os</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Showcase</li><li class="chapter-item expanded "><a href="showcase/sample-projects.html"><strong aria-hidden="true">5.</strong> Sample Projects</a></li><li class="chapter-item expanded affix "><li class="part-title">Embedding</li><li class="chapter-item expanded "><a href="embed/embed.html"><strong aria-hidden="true">6.</strong> Installing from source</a></li><li class="chapter-item expanded "><a href="embed/api.html"><strong aria-hidden="true">7.</strong> C++ API</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="overview.html"><strong aria-hidden="true">1.1.</strong> Cheatsheet</a></li><li class="chapter-item expanded "><a href="lang-basics/syntax.html"><strong aria-hidden="true">1.2.</strong> Syntax</a></li><li class="chapter-item expanded "><a href="lang-basics/variables.html"><strong aria-hidden="true">1.3.</strong> Variables</a></li><li class="chapter-item expanded "><a href="lang-basics/primitives.html"><strong aria-hidden="true">1.4.</strong> Data Types</a></li></ol></li><li class="chapter-item expanded "><a href="object-model/oop.html"><strong aria-hidden="true">2.</strong> OOP</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="object-model/prototype.html"><strong aria-hidden="true">2.1.</strong> Prototypes</a></li><li class="chapter-item expanded "><a href="object-model/methods.html"><strong aria-hidden="true">2.2.</strong> Methods</a></li><li class="chapter-item expanded "><a href="object-model/oop-tables.html"><strong aria-hidden="true">2.3.</strong> OOP with tables</a></li><li class="chapter-item expanded "><a href="object-model/op-overload.html"><strong aria-hidden="true">2.4.</strong> Operator Overloading</a></li><li class="chapter-item expanded "><a href="object-model/classes.html"><strong aria-hidden="true">2.5.</strong> Classes and Inheritance</a></li></ol></li><li class="chapter-item expanded "><a href="functional/hof.html"><strong aria-hidden="true">3.</strong> Higher Order Functions</a></li><li class="chapter-item expanded affix "><li class="part-title">Standard Library</li><li class="chapter-item expanded "><a href="stdlib/strings.html"><strong aria-hidden="true">4.</strong> string</a></li><li class="chapter-item expanded "><a href="stdlib/List.html"><strong aria-hidden="true">5.</strong> list</a></li><li class="chapter-item expanded "><a href="stdlib/table.html"><strong aria-hidden="true">6.</strong> table</a></li><li class="chapter-item expanded "><a href="stdlib/math.html"><strong aria-hidden="true">7.</strong> math</a></li><li class="chapter-item expanded "><a href="stdlib/io.html"><strong aria-hidden="true">8.</strong> io</a></li><li class="chapter-item expanded "><a href="stdlib/os.html"><strong aria-hidden="true">9.</strong> os</a></li><li class="chapter-item expanded affix "><li class="part-title">Showcase</li><li class="chapter-item expanded "><a href="showcase/sample-projects.html"><strong aria-hidden="true">10.</strong> Sample Projects</a></li><li class="chapter-item expanded affix "><li class="part-title">Embedding</li><li class="chapter-item expanded "><a href="embed/embed.html"><strong aria-hidden="true">11.</strong> Installing from source</a></li><li class="chapter-item expanded "><a href="embed/api.html"><strong aria-hidden="true">12.</strong> C++ API</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -790,100 +790,11 @@ print(t.get()) -- 20
 reading from and writing to the same storage location <code>value</code>.</p>
 <p>Higher order functions can be immensely useful, especially if you
 want to use functional programming paradigm and patterns.</p>
-<h1 id="standard-library"><a class="header" href="#standard-library">Standard Library</a></h1>
-<p>This section covers the Vyse standard library.
-Note that this section will be updated frequently as new versions of Vyse are released.
-The standard library is split into 3 separate categories:</p>
-<ul>
-<li>Base</li>
-<li>Prototypes</li>
-<li>Modules</li>
-</ul>
-<h2 id="base"><a class="header" href="#base">Base</a></h2>
-<p>The base standard library contains common functions that are needed very often. All functions
-in this library are available as global variables and can be accessed from any Vyse script. Examples
-include <code>print</code>, <code>input</code>, <code>byte</code> etc.</p>
-<h2 id="prototypes-1"><a class="header" href="#prototypes-1">Prototypes</a></h2>
-<p>Whenever indexing a value that isn't a table, it's prototype is used instead.
-This is how <code>&quot;abcd&quot;:code_at(0)</code> is able to return the ascii code of 'a'.</p>
-<p>When using the <code>:</code> operator on strings, the lookup is instead performed on the <code>String</code> table,
-which is the prototype to all strings. Similarly, there exist the following prototypes for non-table
-values:</p>
-<ul>
-<li><a href="stdlib/./list.html">List</a></li>
-<li><a href="stdlib/./string.html">String</a></li>
-<li><a href="stdlib/./number.html">Number</a></li>
-<li><a href="stdlib/./bool.html">Bool</a></li>
-</ul>
-<p>All these prototypes are available globally. So the snippet below prints true</p>
-<pre><code class="language-vyse">print(&quot;abc&quot;:code_at(0) == String.code_at(&quot;abc&quot;, 0)) -- true
-</code></pre>
-<h2 id="modules"><a class="header" href="#modules">Modules</a></h2>
-<p>Apart from the base library and primitives, there exist some code modules that can be imported
-using the <code>import</code> builtin. The modules supported as of now are listed below.</p>
-<table><thead><tr><th>Module</th><th>Description</th></tr></thead><tbody>
-<tr><td><a href="stdlib/./os.html">os</a></td><td>The OS library, providing some common utilities like telling the time.</td></tr>
-<tr><td><a href="stdlib/./io.html">io</a></td><td>The I/O library, has utilities for reading/writing files and crawling directories.</td></tr>
-<tr><td><a href="stdlib/./math.html">math</a></td><td>Has <code>random</code>, <code>sqrt</code>, <code>cos</code>, <code>sin</code> and other math utility functions.</td></tr>
-</tbody></table>
-<h1 id="string-1"><a class="header" href="#string-1">String</a></h1>
-<p>The globally available <code>String</code> table serves as the prototype to all string values in Vyse. Calling
-a method on any string is equivalent to calling <code>String.method_name(str, ..args..)</code></p>
-<ul>
-<li>substr</li>
-<li>byte</li>
-<li>code_at</li>
-<li>to_number</li>
-<li>replace</li>
-<li>repeat</li>
-<li>reversed</li>
-<li>split</li>
-<li>index_of</li>
-</ul>
-<div class="doc-fn">
-<h3 id="substrstring-start-len"><a class="header" href="#substrstring-start-len">substr(string, start, [len])</a></h3>
-<ul>
-<li><strong>start</strong>: number</li>
-<li><strong>len</strong>: number</li>
-<li><strong>return</strong>: string</li>
-</ul>
-<p>Returns a substring of <code>string</code> starting from position <code>start</code> that is <code>len</code> characters long.
-If <code>len</code> isn't provided, then the suffix of the string starting at <code>start</code> is returned.</p>
-<pre><code class="language-vyse">print(&quot;abcdef&quot;:substr(3, 2)) -- de
-print(&quot;abcdef&quot;:substr(3)) -- def
-</code></pre>
-</div>
-<div class="doc-fn">
-<h3 id="code_atstring-index"><a class="header" href="#code_atstring-index">code_at(string, index)</a></h3>
-<ul>
-<li><strong>index</strong>: number</li>
-<li><strong>return</strong>: number</li>
-</ul>
-<p>Returns the ascii code of the character present at position <code>index</code> in string.</p>
-<pre><code class="language-vyse">print(&quot;abcdef&quot;.code_at(0)) -- 97
-</code></pre>
-</div>
-<div class="doc-fn">
-<h3 id="to_numberstring"><a class="header" href="#to_numberstring">to_number(string)</a></h3>
-<ul>
-<li><strong>return</strong> number</li>
-</ul>
-<p>Returns the base 10 number representation of the string.</p>
-<pre><code class="language-vyse">print(10 + '10':to_number()) -- 20
-</code></pre>
-</div>
-<div class="doc-fn">
-<h3 id="replacestring-to_replace-with"><a class="header" href="#replacestring-to_replace-with">replace(string, to_replace, with)</a></h3>
-<ul>
-<li><strong>to_replace</strong>: string</li>
-<li><strong>with</strong>: number</li>
-<li><strong>return</strong>: string</li>
-</ul>
-<p>Replaces all occurences of <code>to_replace</code> with <code>with</code> in <code>string</code>.</p>
-<pre><code class="language-vyse">print(&quot;she sells sea shells on the sea shore&quot;:replace(&quot;she&quot;, &quot;he&quot;))
--- he sells sea hells on the sea shore
-</code></pre>
-</div><h1 id="list-1"><a class="header" href="#list-1">List</a></h1>
+<h1 id="strings-1"><a class="header" href="#strings-1">Strings</a></h1>
+<p><strong>[TODO]</strong></p>
+<h1 id="list-1"><a class="header" href="#list-1">List</a></h1>
+<p><strong>[TODO]</strong></p>
+<h1 id="table-1"><a class="header" href="#table-1">Table</a></h1>
 <p><strong>[TODO]</strong></p>
 <h1 id="math"><a class="header" href="#math">Math</a></h1>
 <h1 id="io"><a class="header" href="#io">I/O</a></h1>

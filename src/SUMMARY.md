@@ -15,12 +15,13 @@
 
 - [Higher Order Functions](./functional/hof.md)
 
-- [Standard Library](./stdlib/stdlib.md)
-  - [String](./stdlib/string.md)
-  - [List](./stdlib/List.md)
-  - [math](./stdlib/math.md)
-  - [io](./stdlib/io.md)
-  - [os](./stdlib/os.md)
+# Standard Library
+- [string](./stdlib/strings.md)
+- [list](./stdlib/List.md)
+- [table](./stdlib/table.md)
+- [math](./stdlib/math.md)
+- [io](./stdlib/io.md)
+- [os](./stdlib/os.md)
 
 # Showcase
 - [Sample Projects](./showcase/sample-projects.md)
