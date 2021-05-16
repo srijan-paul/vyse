@@ -3,7 +3,9 @@
 :root {
   --fg-primary: #323330;
   --inner-width: 70%;
+  --light-black: #57606f;
   --blu: #086684;
+  --link-color: #219bb6;
 }
 
 body {
@@ -52,13 +54,13 @@ body {
   font-size: 1.8em;
   line-height: 1.2;
   font-family: "Rubik";
+  color: var(--light-black);
 }
 
 .links > .link {
   display: inline-block;
   margin-right: 10px;
 }
-
 
 /* Buttons */
 
@@ -72,7 +74,8 @@ body {
   text-align: center;
 }
 
-.btn, .btn:visited {
+.btn,
+.btn:visited {
   text-transform: uppercase;
   border: 1px solid black;
   text-decoration: none;
@@ -90,6 +93,10 @@ body {
 
 .btn > img {
   padding-right: 0.4em;
+}
+
+.btn span {
+  font-weight: lighter;
 }
 
 .btn:hover {
@@ -135,13 +142,14 @@ body {
 
 a,
 a:visited {
-  color: gray;
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
+  color: var(--link-color);
+  text-decoration: none;
+  transition-duration: 300ms;
+  font-weight: bold;
 }
 
 a:hover {
-  color: #086684;
+  color: var(--blu);
 }
 
 hr {
@@ -168,8 +176,7 @@ h3,
 h4,
 h5,
 h6 {
-  text-decoration: underline #086684;
-  text-decoration-thickness: 0.15em;
+  color: var(--blu);
   font-family: "Rubik";
   font-weight: 500;
 }
@@ -185,7 +192,7 @@ footer {
   margin-top: 5%;
   min-height: 10vh;
   display: flex;
-  background-color: #03142c;
+  background-color: #21384e;
   color: white;
   align-items: center;
 }
@@ -196,8 +203,12 @@ footer > div {
   text-align: center;
 }
 
-footer a {
-  color: cyan;
+#footer-link {
+  color: rgb(0, 183, 255);
+}
+
+#footer-link:hover {
+  text-decoration: underline;
 }
 
 .heart {
@@ -209,6 +220,8 @@ footer a {
 .hljs {
   font-size: 94%;
   background-color: hsl(210, 0%, 99%);
+  border-radius: 4px;
+  border: 0.5px solid rgb(214, 214, 214);
 }
 
 .language-vyse {
